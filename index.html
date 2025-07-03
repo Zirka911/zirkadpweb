@@ -1,54 +1,19 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="ar">
 <head>
-  <meta charset="UTF-8" />
-  <title>تسجيل دخول Zirka</title>
-  <style>
-    body {
-      background: linear-gradient(to right, #141e30, #243b55);
-      font-family: Tahoma, sans-serif;
-      color: white;
-      text-align: center;
-      padding-top: 100px;
-    }
-    input, button {
-      padding: 10px;
-      margin: 10px;
-      border-radius: 8px;
-      border: none;
-      font-size: 16px;
-    }
-    button {
-      background-color: #4caf50;
-      color: white;
-      cursor: pointer;
-    }
-  </style>
+  <meta charset="UTF-8">
+  <title>تسجيل الدخول</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h2>أهلاً بك في Zirka</h2>
-  <input type="text" id="username" placeholder="اسم المستخدم">
-  <br>
-  <input type="password" id="password" placeholder="كلمة المرور">
-  <br>
-  <button onclick="login()">دخول</button>
-  <div id="message"></div>
-
-  <script>
-    const user = "Zirka";
-    const pass = "123456";
-    function login() {
-      const u = document.getElementById("username").value;
-      const p = document.getElementById("password").value;
-      const msg = document.getElementById("message");
-
-      if (u === user && p === pass) {
-        window.location.href = "dashboard.html";
-      } else {
-        msg.style.color = "red";
-        msg.textContent = "خطأ في تسجيل الدخول.";
-      }
-    }
-  </script>
+  <div class="container">
+    <h2>تسجيل الدخول</h2>
+    <form action="#" method="post">
+      <input type="text" placeholder="اسم المستخدم" required>
+      <input type="password" placeholder="كلمة المرور" required>
+      <button type="submit">دخول</button>
+    </form>
+    <p>ليس لديك حساب؟ <a href="register.html">سجل الآن</a></p>
+  </div>
 </body>
 </html>
